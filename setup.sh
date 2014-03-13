@@ -23,9 +23,9 @@ sudo apt-get install -y rlwrap
 
 # Install emacs24
 # https://launchpad.net/~cassou/+archive/emacs
-sudo apt-add-repository -y ppa:cassou/emacs
-sudo apt-get -qq update
-sudo apt-get install -y emacs24-nox emacs24-el emacs24-common-non-dfsg
+#sudo apt-add-repository -y ppa:cassou/emacs
+#sudo apt-get -qq update
+#sudo apt-get install -y emacs24-nox emacs24-el emacs24-common-non-dfsg
 
 # Install Heroku toolbelt
 # https://toolbelt.heroku.com/debian
@@ -36,9 +36,9 @@ cd $HOME
 if [ -d ./dotfiles/ ]; then
     mv dotfiles dotfiles.old
 fi
-if [ -d .emacs.d/ ]; then
-    mv .emacs.d .emacs.d~
-fi
+#if [ -d .emacs.d/ ]; then
+#    mv .emacs.d .emacs.d~
+#fi
 git clone https://github.com/startup-class/dotfiles.git
 ln -sb dotfiles/.screenrc .
 ln -sb dotfiles/.bash_profile .
