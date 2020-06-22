@@ -15,7 +15,7 @@ sudo service xrdp restart
 sudo sed "s/PasswordAuthentication.*/PasswordAuthentication yes/g" /etc/ssh/sshd_config
 
 sudo passwd ubuntu
-sudo restart ssh
+sudo service ssh restart
 
 
 
