@@ -1,0 +1,24 @@
+
+
+sudo apt-get update
+sudo apt-get upgrade
+
+
+
+sudo apt-get install xrdp
+sudo apt-get install xfce4
+echo xfce4-session >~/.xsession
+
+sudo sed "s/start.*/startxfce4/g" /etc/xrdp/startwm.sh
+sudo service xrdp restart
+
+sudo sed "s/PasswordAuthentication.*/PasswordAuthentication yes/g" /etc/ssh/sshd_config
+
+sudo passwd ubuntu
+sudo restart ssh
+
+
+
+
+
+
