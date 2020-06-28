@@ -4,10 +4,24 @@ sudo apt-get update
 sudo apt-get upgrade
 
 
+https://linoxide.com/debian/configure-vnc-server-debian-9-stretch/
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-16-04
 
 
+apt-get update
+apt-get install xfce4 xfce4-goodies gnome-icon-theme tightvncserver
+adduser vnc
+apt-get install sudo
+gpasswd -a vnc sudo
+su - vnc
+vncserver
+vncserver -kill :1
+# edit .vnc/xstartup
+# Add following line to bottom
+startxfce4 &
 
 
+# old old
 
 
 sudo apt-get install --no-install-recommends ubuntu-desktop gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal gnome-core
